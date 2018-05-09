@@ -61,15 +61,15 @@ myFunc1();*/
  * 引用返回
  * @return int
  */
-function &myFunc3(){
-    static $b = 10;
-    return $b;
-}
-$a3 = myFunc3();
-echo ($a3); //10
-$a3 = &myFunc3();
-$a3 = 100;
-echo myFunc3(); //100
+//function &myFunc3(){
+//    static $b = 10;
+//    return $b;
+//}
+//$a3 = myFunc3();
+//echo ($a3); //10
+//$a3 = &myFunc3();
+//$a3 = 100;
+//echo myFunc3(); //100
 
 /**
  * 外部文件的导入
@@ -83,3 +83,31 @@ echo myFunc3(); //100
  *加载过程中如果未找到文件，include结构会发出一条警告，而require会发生致命的错误，导致脚本终止
  * require(include)与require_one(include_once)唯一区别是会检查该文件是否被包含过，如果是则不会再次包含
  */
+//function foo1(){
+//  return  function (){
+//        echo 'i am in foo';
+//    };
+//}
+//foo1()();
+//
+//function counter($a){
+//    static $cnt = 1;
+//    if($a <= 20 ){
+//        $cnt++;
+//        counter($a+1);
+//    }else{
+//        echo $cnt;
+//        echo $a;
+//    }
+//}
+//counter(1);
+
+/**
+ * IP处理函数
+ *  ip2long 将 IPV4 的字符串互联网协议转换成长整型数字
+ *  long2ip 将长整型数字 转换成IPV4 的字符串互联网协议
+ */
+//$ip = gethostbyname('www.baidu.com');
+//echo $ip_long =  ip2long($ip);
+//echo long2ip($ip_long);
+
